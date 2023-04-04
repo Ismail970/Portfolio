@@ -1,0 +1,167 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+@include media-lg {
+  section {
+    display: flex;
+
+    header {
+      text-align: right;
+      width: $lg-width;
+    }
+  }
+
+  .equivalen {
+    width: $lg-width;
+  }
+
+  .intro {
+    height: 100vh;
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      background-color: $primary;
+
+      h1 {
+        line-height: 1;
+        max-width: 300px;
+      }
+    }
+
+    .sroller {
+      border: 0;
+      background: none;
+      cursor: pointer;
+      display: block;
+
+      img {
+        width: 50px;
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .skills {
+    ul {
+      padding-top: 1em;
+      width: $lg-width;
+    }
+  }
+
+  .content {
+    width: $lg-width;
+
+    .accounts {
+      margin-left: 1em;
+      margin-top: 1em;
+    }
+  }
+
+  .about {
+    header {
+      padding-top: 1em;
+    }
+
+    div {
+      width: $lg-width;
+
+      p {
+        padding-top: 1em;
+      }
+    }
+  }
+
+  .contact {
+    header {
+      padding-top: 3em;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      width: $lg-width;
+      padding-top: .5em;
+
+      footer {
+        position: absolute;
+        transform: translate(-240px, 80px);
+        align-self: flex-start;
+        text-align: right;
+
+        .email {
+          &::after {
+            display: none;
+          }
+
+          img {
+            transform: scale(-1) translate(-70px, 15px);
+          }
+        }
+
+        .accounts {
+          align-items: flex-end;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      .copyright {
+        margin-top: 2em;
+      }
+    }
+  }
+}
+
+@include media-xl {
+  .work {
+    .content {
+      .project {
+        display: flex;
+        gap: 1em;
+        margin-bottom: 0;
+
+        img {
+          width: 58%;
+          -o-object-fit: cover;
+          object-fit: cover;
+        }
+
+        div {
+          align-self: flex-end;
+
+          h4 {
+            margin-top: 0;
+            margin-bottom: .5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-small {
+  .contact {
+    div {
+      .send-message {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+@include media-very-small {
+  .about {
+    div {
+      p:first-child {
+        strong::after {
+          transform: translate(0, -18px) skew(-30deg) rotate(-2deg);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,324 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+body {
+  background: url("../assets/imgs/pattren.png") repeat 0 0;
+  overflow: overlay;
+}
+
+header {
+  background-color: $primary;
+}
+
+.intro {
+  header {
+    padding: 4em 2em;
+    background-color: transparent;
+
+    p {
+      margin-top: 1em;
+      padding-bottom: 1em;
+      line-height: $line-height;
+    }
+  }
+
+  .sroller {
+    display: none;
+  }
+}
+
+.skills {
+  header {
+    @include header
+  }
+
+  ul {
+    padding: 2em 3em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+
+    li {
+      padding: 1em 0;
+      display: grid;
+      justify-items: center;
+
+      .fa-brands {
+        padding-bottom: .2em;
+      }
+
+      .fa-wheelchair {
+        padding-bottom: .2em;
+      }
+
+      img {
+        width: 60px;
+        user-select: none;
+
+        &:last-child {
+          width: 50px;
+          padding-bottom: .4em;
+        }
+      }
+    }
+  }
+}
+
+.work {
+  header {
+    @include header
+  }
+
+  .content {
+    padding: $main-padding;
+    padding-top: 0;
+
+    p:first-child:after {
+      @include after-header;
+      transform: translate(-3px, -15px) skew(-30deg) rotate(-3deg);
+      width: 170px;
+    }
+
+    .project {
+      margin: 1em;
+      margin-top: 2em;
+      margin-bottom: 4em;
+
+      .lazy-img {
+        -webkit-filter: blur(20px);
+        filter: blur(20px);
+      }
+
+      div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        -moz-column-gap: 1em;
+        column-gap: 1em;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: $radius;
+        padding: .3em 0;
+        width: 100%;
+        border: 1px solid #000000;
+        margin-top: 1em;
+        color: $links;
+        @include transition(background);
+        @include transition(border-color);
+
+        &:hover,
+        &:focus {
+          border-color: $primary;
+          background-color: $primary;
+        }
+
+        img {
+          width: 25px;
+        }
+      }
+
+      p {
+        color: $text;
+        line-height: $line-height;
+      }
+
+      p,
+      img {
+        grid-column: 1 / -1;
+      }
+
+      h4 {
+        margin-top: .5em;
+        margin-bottom: .5em;
+        font-size: 1.5rem;
+
+        &::after {
+          transform: translate(-3px, -17px) skew(-30deg) rotate(-4deg);
+          width: 80px;
+          @include after-header;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+
+      &:last-child {
+        margin-bottom: 2em;
+      }
+    }
+
+    .accounts {
+      display: flex;
+      align-items: center;
+      margin-top: 1.5em;
+
+      img {
+        width: 30px;
+        margin-left: .8em;
+      }
+
+      &::after {
+        transform: skew(-30deg) rotate(-2deg);
+        width: 200px;
+        @include after-header;
+      }
+    }
+  }
+}
+
+.about {
+  header {
+    @include header
+  }
+
+  div {
+    h3 {
+      padding-left: 32px;
+
+      &::after {
+        transform: translate(-3px, -15px) skew(-30deg) rotate(-5deg);
+        width: 80px;
+        @include after-header;
+      }
+    }
+
+    p {
+      padding: $main-padding;
+      line-height: $line-height;
+      color: $text;
+
+      strong {
+        white-space: nowrap;
+
+        &::after {
+          transform: translate(160px, -20px) skew(-30deg) rotate(-2deg);
+          width: 175px;
+          @include after-header;
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  header {
+    @include header
+  }
+
+  div {
+    .send-message {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2em;
+      margin: 2em;
+
+      * {
+        width: 100%;
+      }
+
+      input,
+      textarea {
+        border: 1px solid $border;
+        border-radius: $radius;
+        outline-color: $primary;
+      }
+
+      textarea {
+        grid-column: 1 / -1;
+        resize: none;
+        opacity: $form-opacity;
+      }
+
+      input {
+        &:not(.send-message input:last-child) {
+          opacity: $form-opacity;
+        }
+
+        &:last-child {
+          background-color: $primary;
+          grid-column: 1 / 2;
+          border: 0;
+          cursor: pointer;
+          @include transition(background);
+
+          &:hover,
+          &:focus {
+            background-color: $hover;
+          }
+        }
+      }
+
+      input,
+      textarea {
+        padding: 1em;
+      }
+    }
+
+    footer {
+      padding: $main-padding;
+
+      .email {
+        margin-bottom: 1em;
+        color: $text;
+
+        &::after {
+          transform: translateY(-16px) skew(-30deg) rotate(-5deg);
+          width: 65px;
+          @include after-header;
+        }
+
+        img {
+          width: 30px;
+          position: absolute;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          transform: scaleY(-1) translate(80px, 15px);
+        }
+      }
+
+      .accounts {
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+
+        &::after {
+          transform: translateY(9px) skew(-30deg) rotate(-3deg);
+          width: 125px;
+          @include after-header;
+        }
+
+        .fa-github {
+          color: $links;
+          font-size: 2rem;
+          padding-top: .5em;
+        }
+
+        a {
+          width: 40px;
+        }
+      }
+    }
+
+    address {
+      opacity: .65;
+    }
+  }
+
+  .copyright {
+    opacity: .4;
+    margin-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 4em;
+    font-size: .8rem;
+  }
+}
+
+.heart {
+  color: red;
+}
