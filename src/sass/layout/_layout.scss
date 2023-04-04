@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background-color: $primary;
+  background-color: transparent;
 }
 
 .intro {
@@ -84,11 +84,6 @@ header {
       margin-top: 2em;
       margin-bottom: 4em;
 
-      .lazy-img {
-        -webkit-filter: blur(20px);
-        filter: blur(20px);
-      }
-
       div {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -96,7 +91,7 @@ header {
         column-gap: 1em;
       }
 
-      a {
+      .project-link {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -118,6 +113,10 @@ header {
         img {
           width: 25px;
         }
+      }
+
+      a {
+        color: grey;
       }
 
       p {
@@ -215,6 +214,7 @@ header {
       grid-template-columns: 1fr 1fr;
       gap: 2em;
       margin: 2em;
+      padding-top: .6em;
 
       * {
         width: 100%;
