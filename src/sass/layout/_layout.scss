@@ -293,12 +293,6 @@ header {
           @include after-header;
         }
 
-        .fa-github {
-          color: $links;
-          font-size: 2rem;
-          padding-top: .5em;
-        }
-
         a {
           width: 40px;
         }
