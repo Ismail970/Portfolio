@@ -6,7 +6,7 @@ const scrollSection = document.getElementById('#first');
 const year = new Date().getFullYear().toString();
 
 scrollBtn.addEventListener("click", () => {
-  scrollSection.scrollIntoView(true);
+  scrollSection.scrollIntoView({ behavior: "smooth" });
 });
 
 window.addEventListener("load", () => {
