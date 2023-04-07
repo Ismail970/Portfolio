@@ -1,0 +1,59 @@
+@import url("https://brick.freetls.fastly.net/Blogger+Sans:400,700");
+
+$accent: #49fcd4;
+$links: #000;
+$text: #202020;
+
+@mixin transition($target) {
+  transition: $target 350ms ease-out;
+}
+
+@mixin after-title {
+  content: "";
+  background-color: $accent;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  height: 15px;
+}
+
+@mixin header {
+  padding-bottom: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@mixin media-lg {
+  @media (min-width: 875px) {
+    @content;
+  }
+}
+
+body {
+  font-family: "Blogger Sans", "Source Sans Pro", Helvetica, sans-serif;
+  background: url("../assets/imgs/pattren.png") repeat 0 0;
+  overflow: overlay;
+  max-width: 500px;
+  margin: 0 auto;
+
+  @include media-lg {
+    max-width: 1366px;
+  }
+
+  .copyright {
+    opacity: .5;
+    padding: 2em;
+    font-size: .8rem;
+
+    .heart-emoji {
+      color: red;
+    }
+
+    @include media-lg {
+      width: 50%;
+      position: absolute;
+      right: 0;
+      padding-left: 1em;
+    }
+  }
+}

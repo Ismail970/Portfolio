@@ -3,98 +3,118 @@
 
   <head>
     <meta charset="UTF-8" />
-
     <link rel="icon"
       type="image/svg+xml"
       href="/favicon.svg" />
-
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0" />
     <title>Welcom</title>
 
     <link rel="stylesheet"
-      href="//brick.freetls.fastly.net/Blogger+Sans:400,700">
-    <link rel="stylesheet"
       href="src/sass/main.scss">
-
     <script defer
       src="src/js/script.js"></script>
   </head>
 
   <body>
     <section class="intro">
-      <header>
-        <h1>hi, i'm ismail</h1>
-        <p>a front-end web developer</p>
-        <button class="sroller"><img src="src/assets/imgs/down-arrow.png"
-            alt="scroll arrow"></button>
-      </header>
+      <h1 class="intro__title">hi, i'm ismail</h1>
+      <p class="intro__subtitle">a front-end web developer</p>
+      <button class="intro__scroll-btn"><img src="src/assets/imgs/down-arrow.png"
+          alt="scroll arrow"></button>
     </section>
 
     <section class="skills">
-      <header>
+      <header class="skills__header">
         <h2>skills & tools</h2>
       </header>
-      <ul>
-        <li><img src="src/assets/svgs/html-124-svgrepo-com.svg"
-            alt="html"> html</li>
-        <li><img src="src/assets/svgs/css3-02-svgrepo-com.svg"
-            alt="css"> css</li>
-        <li><img src="src/assets/svgs/sass-svgrepo-com.svg"
-            alt="scss/sass"> scss/sass</li>
-        <li><img src="src/assets/svgs/bootstrap-fill-svgrepo-com.svg"
-            alt="bootstrap"> bootstrap</li>
-        <li><img src="src/assets/svgs/tailwind-css-svgrepo-com.svg"
-            alt="tailwind"> tailwind CSS</li>
-        <li><img src="src/assets/svgs/daisy.svg"
-            alt="daisy-ui"> Daisy UI</li>
-        <li><img src="src/assets/svgs/javascript-155-svgrepo-com.svg"
-            alt="javascript"> javascript</li>
-        <li><img src="src/assets/svgs/react-svgrepo-com.svg"
-            alt="react"> react</li>
-        <li><img src="src/assets/svgs/redux.svg"
-            alt="redux"> redux</li>
-        <li><img src="src/assets/svgs/jquery.svg"
-            alt="jquery"> jquery</li>
-        <li><img src="src/assets/svgs/git-svgrepo-com.svg"
-            alt="git"> git</li>
-        <li><img src="src/assets/svgs/webpack.svg"
-            alt="webpack"> webpack</li>
-        <li><img src="src/assets/svgs/vite.svg"
-            alt="vite"> vite</li>
-        <li><img src="src/assets/svgs/accessibility-svgrepo-com.svg"
-            alt="accessibility"> accessibility</li>
-        <li><img src="src/assets/svgs/photoshop-svgrepo-com.svg"
-            alt="photoshop"> Photoshop</li>
-        <li><img src="src/assets/svgs/illustrator-svgrepo-com.svg"
-            alt="illustartor"> Illustartor</li>
-        <li><img src="src/assets/svgs/adobe-xd-svgrepo-com.svg"
-            alt="adobe xd"> Adobe XD</li>
-        <li><img src="src/assets/svgs/figma-svgrepo-com.svg"
-            alt="accessibility"> Figma</li>
-      </ul>
+
+      <div class="skills__lists">
+        <figure class="skills__list">
+          <figcaption class="list-title">Programming :</figcaption>
+          <ul>
+            <li><img src="src/assets/svgs/javascript-155-svgrepo-com.svg"
+                alt="javascript">JavaScript</li>
+            <li><img src="src/assets/svgs/jquery.svg"
+                alt="jquery">Jquery</li>
+            <li><img src="src/assets/svgs/react-svgrepo-com.svg"
+                alt="react">React</li>
+          </ul>
+        </figure>
+
+        <figure class="skills__list">
+          <figcaption class="list-title">Styling :</figcaption>
+          <ul>
+            <li><img src="src/assets/svgs/html-124-svgrepo-com.svg"
+                alt="html">HTML</li>
+            <li><img src="src/assets/svgs/css3-02-svgrepo-com.svg"
+                alt="css">CSS</li>
+            <li><img src="src/assets/svgs/sass-svgrepo-com.svg"
+                alt="scss/sass">SCSS/SASS</li>
+            <li><img src="src/assets/svgs/bootstrap-fill-svgrepo-com.svg"
+                alt="bootstrap">Bootstrap</li>
+            <li><img src="src/assets/svgs/tailwind-css-svgrepo-com.svg"
+                alt="tailwind">Tailwind CSS</li>
+            <li><img src="src/assets/svgs/daisy.svg"
+                alt="daisy-ui">Daisy UI</li>
+          </ul>
+        </figure>
+
+        <figure class="skills__list">
+          <figcaption class="list-title">Designing :</figcaption>
+          <ul>
+            <li><img src="src/assets/svgs/photoshop-svgrepo-com.svg"
+                alt="photoshop">Photoshop</li>
+            <li><img src="src/assets/svgs/illustrator-svgrepo-com.svg"
+                alt="illustartor">Illustartor</li>
+            <li><img src="src/assets/svgs/adobe-xd-svgrepo-com.svg"
+                alt="adobe xd">Adobe XD</li>
+            <li><img src="src/assets/svgs/figma-svgrepo-com.svg"
+                alt="accessibility">Figma</li>
+          </ul>
+        </figure>
+
+        <figure class="skills__list">
+          <figcaption class="list-title">Others :</figcaption>
+          <ul>
+            <li><img src="src/assets/svgs/git-svgrepo-com.svg"
+                alt="git">Git</li>
+            <li><img src="src/assets/svgs/webpack.svg"
+                alt="webpack">Webpack</li>
+            <li><img src="src/assets/svgs/vite.svg"
+                alt="vite">Vite</li>
+            <li><img src="src/assets/svgs/redux.svg"
+                alt="redux">Redux</li>
+            <li><img src="src/assets/svgs/accessibility-svgrepo-com.svg"
+                alt="accessibility">Accessibility</li>
+            <li><img src="src/assets/svgs/microsoftoffice-svgrepo-com.svg"
+                alt="office suit">Office Suit</li>
+          </ul>
+        </figure>
+      </div>
     </section>
 
     <section class="work"
       id="#first">
-      <header>
+      <header class="work__header">
         <h2>some of my work</h2>
       </header>
 
-      <div class="content">
+      <div class="work__projects">
         <div class="project">
-          <img src="src/assets/imgs/screenshot-desktop-active-IP-Address-Tracker.png"
-            alt="project screenshot">
-          <div>
-            <h4>IPGuru</h4>
-            <p>Get the location and other details of any IP address.
+          <img class="project-img"
+            src="src/assets/imgs/screenshot-desktop-active-IP-Address-Tracker.png"
+            alt="preview">
+          <div class="project-body">
+            <h4 class="body-title">IPGuru</h4>
+            <p class="body-description">Get the location and other details of any IP address.
               <br>
               Built with plain Javascript, leaflet, CSS and Parcel.
             </p>
-            <a class="project-link"
+            <a class="body-link"
               href="https://iptrax.netlify.app/"
               target="_blank">Try it</a>
-            <a class="project-link"
+            <a class="body-link"
               href="https://github.com/Ismail970/IPTrax"
               target="_blank">
               <img src="src/assets/svgs/github-142-svgrepo-com.svg"
@@ -104,18 +124,19 @@
         </div>
 
         <div class="project">
-          <img src="src/assets/imgs/screenshot-github-finder.png"
-            alt="project screenshot">
-          <div>
-            <h4>Ginder</h4>
-            <p>Search Github profiles and get their details.
+          <img class="project-img"
+            src="src/assets/imgs/screenshot-github-finder.png"
+            alt="preview">
+          <div class="project-body">
+            <h4 class="body-title">Github finder</h4>
+            <p class="body-description">Search Github profiles and get their details.
               <br>
               Built with React, React router, TailwindCSS, Daisy UI and Vite.
             </p>
-            <a class="project-link"
+            <a class="body-link"
               href="https://github-finder-i.netlify.app/"
               target="_blank">Try it</a>
-            <a class="project-link"
+            <a class="body-link"
               href="https://github.com/Ismail970/github-finder"
               target="_blank">
               <img src="src/assets/svgs/github-142-svgrepo-com.svg"
@@ -125,21 +146,22 @@
         </div>
 
         <div class="project">
-          <img src="src/assets/imgs/screenshot-forkify.png"
-            alt="project screenshot">
-          <div>
-            <h4>Forkify</h4>
-            <p>Search over a 1,000,000 recipe or make your own and share it with others.
+          <img class="project-img"
+            src="src/assets/imgs/screenshot-forkify.png"
+            alt="preview">
+          <div class="project-body">
+            <h4 class="body-title">Forkify</h4>
+            <p class="body-description">Search over a 1,000,000 recipe or make your own and share it with others.
               <br>
               built with React, SASS/SCSS and Vite.
               <br>
               The <a href="https://github.com/Ismail970/Forkify"
                 target="_blank">original project</a> was built in Javascript.
             </p>
-            <a class="project-link"
+            <a class="body-link"
               href="https://forkify-r-i.netlify.app/"
               target="_blank">Try it</a>
-            <a class="project-link"
+            <a class="body-link"
               href="https://github.com/Ismail970/Forkify-react"
               target="_blank">
               <img src="src/assets/svgs/github-142-svgrepo-com.svg"
@@ -149,19 +171,20 @@
         </div>
 
         <div class="project">
-          <img src="src/assets/imgs/screenshot-house-marketplace.vercel.app-2023.04.06-20_53_36.png"
-            alt="project screenshot">
-          <div>
-            <h4>Houser</h4>
-            <p>A house marketplace for renting, selling and buying houses.
+          <img class="project-img"
+            src="src/assets/imgs/screenshot-house-marketplace.vercel.app-2023.04.06-20_53_36.png"
+            alt="preview">
+          <div class="project-body">
+            <h4 class="body-title">Houser</h4>
+            <p class="body-description">A house marketplace for renting, selling and buying houses.
               <br>
               Built with React, React router, CSS, Firebase and Vite.
               (Still under development)
             </p>
-            <a class="project-link"
+            <a class="body-link"
               href="#"
               target="_blank">Try it</a>
-            <a class="project-link"
+            <a class="body-link"
               href="https://github.com/Ismail970/Houser"
               target="_blank">
               <img src="src/assets/svgs/github-142-svgrepo-com.svg"
@@ -170,30 +193,30 @@
           </div>
         </div>
 
-        <div>
-          <h3 class="accounts">For more pay a visit to:
-            <a target="_blank"
-              href="https://github.com/Ismail970?tab=repositories">
-              <img src="src/assets/svgs/github-142-svgrepo-com.svg"
-                alt="github">
-            </a>
-          </h3>
+        <div class="work__account">
+          <h3 class="account-title">For more pay a visit to :</h3>
+          <a class="account-link"
+            target="_blank"
+            href="https://github.com/Ismail970?tab=repositories">
+            <img src="src/assets/svgs/github-142-svgrepo-com.svg"
+              alt="github">
+          </a>
         </div>
 
       </div>
     </section>
 
     <section class="contact">
-      <header>
+      <header class="contact__header">
         <h2>get in touch</h2>
       </header>
 
-      <div>
+      <div class="contact__body">
         <form action="#"
           method="post"
           name="contact"
           data-netlify="true"
-          class="send-message">
+          class="body-form">
           <input aria-label="enter your name"
             type="text"
             name="name"
@@ -214,11 +237,12 @@
 
           <input aria-label="enter your message"
             type="submit"
-            value="Send Message">
+            value="Send Message"
+            class="form-submit-btn">
         </form>
 
-        <footer>
-          <h3 class="email">email
+        <footer class="body-footer">
+          <h3 class="body-title">email
             <img src="src/assets/imgs/right-up-arrow.png"
               alt="arrow by Flaticon">
           </h3>
@@ -226,15 +250,17 @@
             <p>ismail.m0@proton.me</p>
           </address>
         </footer>
-
-        <p class="copyright">
-          &copy; All rights reserved |
-          <span id="year">2022</span>
-          | Made with
-          <span class="heart">❤</span>
-        </p>
       </div>
     </section>
+
+    <footer>
+      <p class="copyright">
+        &copy; All rights reserved |
+        <span id="year"></span>
+        | Made with
+        <span class="heart-emoji">❤</span>
+      </p>
+    </footer>
   </body>
 
 </html>

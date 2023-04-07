@@ -1,0 +1,125 @@
+@use "../base" as *;
+
+.work {
+  padding: 2em;
+
+  &__header {
+    @include header
+  }
+
+  &__projects {
+    padding: 0 1em;
+
+    .project {
+      padding-bottom: 4em;
+
+      &:nth-child(2) {
+        .project-body {
+          .body-title {
+            &::after {
+              transform: translate(-3px, -17px) skew(-30deg) rotate(-2deg);
+              width: 150px;
+            }
+          }
+        }
+      }
+
+      .project-img {
+        width: 100%;
+        grid-column: 1 / -1;
+      }
+
+      .project-body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        -moz-column-gap: 1em;
+        column-gap: 1em;
+
+        .body-title {
+          white-space: nowrap;
+          margin-top: .5em;
+          margin-bottom: .5em;
+          font-size: 1.5rem;
+
+          &::after {
+            transform: translate(-3px, -17px) skew(-30deg) rotate(-4deg);
+            width: 80px;
+            @include after-title;
+          }
+        }
+
+        .body-description {
+          color: $text;
+          line-height: 1.8;
+          grid-column: 1 / -1;
+
+          a {
+            color: rgb(95, 95, 95);
+
+            &:hover,
+            &:focus {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .body-link {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          padding: .3em 0;
+          width: 100%;
+          border: 1px solid #000000;
+          margin-top: 1em;
+          color: $links;
+          @include transition(all);
+
+          &:hover,
+          &:focus {
+            border-color: $accent;
+            background-color: $accent;
+          }
+
+          img {
+            width: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  &__account {
+    display: flex;
+    align-items: center;
+
+    .account-title {
+      &::after {
+        transform: translateY(-17px) skew(-30deg) rotate(-2deg);
+        width: 200px;
+        @include after-title;
+      }
+    }
+
+    .account-link {
+      img {
+        width: 30px;
+        margin-left: .8em;
+      }
+    }
+  }
+
+  @include media-lg {
+    display: flex;
+
+    &__header {
+      width: 100%;
+      text-align: right;
+      padding-right: 2em;
+    }
+
+    &__projects {
+      width: 100%;
+    }
+  }
+}

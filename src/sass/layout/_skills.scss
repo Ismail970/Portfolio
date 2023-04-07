@@ -1,0 +1,73 @@
+@use "../base" as *;
+
+.skills {
+  padding: 2em;
+
+  &__header {
+    @include header
+  }
+
+  &__list {
+    &:nth-child(1) {
+      .list-title {
+        &::after {
+          width: 110px;
+        }
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(4) {
+      .list-title {
+        &::after {
+          width: 65px;
+        }
+      }
+    }
+
+    .list-title {
+      font-weight: bolder;
+      padding-left: 1em;
+      font-size: 1.1em;
+
+      &::after {
+        transform: translate(-3px, -17px) skew(-30deg) rotate(-4deg);
+        width: 80px;
+        @include after-title;
+      }
+    }
+
+    ul {
+      padding: 2em 3em;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+
+      li {
+        padding: 1em 0;
+        display: grid;
+        justify-items: center;
+        text-transform: capitalize;
+
+        img {
+          width: 50px;
+          padding-bottom: .5em;
+        }
+      }
+    }
+  }
+
+  @include media-lg {
+    display: flex;
+
+    &__header {
+      width: 100%;
+      text-align: right;
+      padding-right: 2em;
+    }
+
+    &__lists {
+      width: 100%;
+    }
+  }
+}

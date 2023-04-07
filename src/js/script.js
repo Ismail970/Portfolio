@@ -1,12 +1,14 @@
 'use strict';
 
-const scrollBtn = document.querySelector(".sroller");
+const scrollBtn = document.querySelector(".intro__scroll-btn");
 const scrollSection = document.getElementById('#first');
 
-const curYear = new Date().getFullYear().toString();
-document.getElementById("year").textContent = curYear;
+const year = new Date().getFullYear().toString();
 
-scrollBtn.addEventListener("click", function () {
-  // smooth scrolling
+scrollBtn.addEventListener("click", () => {
   scrollSection.scrollIntoView({ behavior: "smooth" });
 });
+
+window.addEventListener("load", () => {
+  document.getElementById("year").textContent = year;
+})
