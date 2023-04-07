@@ -12,12 +12,8 @@
 
     .body-form {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 2em;
-
-      * {
-        width: 100%;
-      }
 
       input,
       textarea {
@@ -91,6 +87,11 @@
 
     &__body {
       width: 100%;
+
+      .body-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   }
 }
