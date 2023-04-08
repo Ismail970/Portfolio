@@ -1,12 +1,83 @@
-@use "../base" as *;
+@use '../base' as *;
 
 .intro {
+  @-webkit-keyframes fade {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes slide {
+    0% {
+      transform: translateX(-3%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(-3%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @-webkit-keyframes float {
+    0% {
+      transform: translateY(-5px);
+    }
+
+    100% {
+      transform: translateY(5px);
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+
+    50% {
+      transform: translatey(-6px);
+    }
+
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 4em 2em;
   text-transform: capitalize;
   height: 100vh;
+  -webkit-animation: fade ease-out 1s 1;
+  animation: fade ease-out 1s 1;
+
+  * {
+    -webkit-animation: slide ease 1s 1;
+    animation: slide ease 1s 1;
+  }
 
   &__title {
     font-size: 4rem;
@@ -21,6 +92,8 @@
   }
 
   &__scroll-btn {
+    -webkit-animation: float ease-out 2.5s infinite;
+    animation: float ease-out 2.5s infinite;
     align-self: flex-end;
     margin-top: 1em;
     margin-right: 4em;
@@ -32,12 +105,39 @@
   }
 
   @include media-lg {
+    @-webkit-keyframes slide {
+      0% {
+        transform: translateY(3%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateY(3%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
     display: flex;
     align-items: flex-end;
     width: 50%;
 
+    * {
+      -webkit-animation: slide ease 1.2s 1;
+      animation: slide ease 1.2s 1;
+    }
+
     &__scroll-btn {
       margin-right: 0;
+      -webkit-animation: float ease-out 2.5s infinite;
+      animation: float ease-out 2.5s infinite;
     }
 
     &__title {

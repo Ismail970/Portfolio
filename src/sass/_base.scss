@@ -30,11 +30,28 @@ $text: #202020;
 }
 
 body {
-  font-family: "Blogger Sans", "Source Sans Pro", Helvetica, sans-serif;
+  @-webkit-keyframes bg-scrolling-reverse {
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+
+  @keyframes bg-scrolling-reverse {
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+
+  font-family: "Blogger Sans",
+  "Source Sans Pro",
+  Helvetica,
+  sans-serif;
   background: url("../assets/imgs/pattren.png") repeat 0 0;
   overflow: overlay;
   max-width: 500px;
   margin: 0 auto;
+  -webkit-animation: bg-scrolling-reverse linear 6s infinite;
+  animation: bg-scrolling-reverse linear 6s infinite;
 
   @include media-lg {
     max-width: 1366px;
