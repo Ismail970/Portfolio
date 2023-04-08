@@ -54,11 +54,12 @@
           grid-column: 1 / -1;
 
           a {
-            color: rgb(95, 95, 95);
+            color: $links;
 
-            &:hover,
-            &:focus {
-              text-decoration: underline;
+            &::after {
+              @include after-title;
+              transform: translate(30px, -23px) skew(-30deg) rotate(-4deg);
+              width: 90px;
             }
           }
         }
