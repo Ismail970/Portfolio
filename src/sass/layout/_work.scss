@@ -123,9 +123,11 @@
     align-items: center;
 
     .account-title {
+      font-size: 1em;
+
       &::after {
         transform: translateY(-17px) skew(-30deg) rotate(-2deg);
-        width: 250px;
+        width: 210px;
         @include after-title;
       }
     }
