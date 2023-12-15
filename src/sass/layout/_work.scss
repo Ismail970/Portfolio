@@ -13,13 +13,42 @@
     .project {
       padding-bottom: 4em;
 
+      &:nth-child(1) {
+        .body-title {
+          &::after {
+            width: 90px;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .body-title {
+          &::after {
+            width: 150px;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .body-title {
+          &::after {
+            width: 85px;
+          }
+        }
+      }
+
+      // &:nth-child(4) {
+      //   .body-title {
+      //     &::after {
+      //       width: 95px;
+      //     }
+      //   }
+      // }
+
       &:nth-child(4) {
-        .project-body {
-          .body-title {
-            &::after {
-              transform: translate(-3px, -17px) skew(-30deg) rotate(-2deg);
-              width: 150px;
-            }
+        .body-title {
+          &::after {
+            width: 160px;
           }
         }
       }
@@ -43,7 +72,6 @@
 
           &::after {
             transform: translate(-3px, -17px) skew(-30deg) rotate(-4deg);
-            width: 80px;
             @include after-title;
           }
         }
@@ -59,7 +87,7 @@
             &::after {
               @include after-title;
               transform: translate(30px, -23px) skew(-30deg) rotate(-4deg);
-              width: 90px;
+              width: 105px;
             }
           }
         }
@@ -97,7 +125,7 @@
     .account-title {
       &::after {
         transform: translateY(-17px) skew(-30deg) rotate(-2deg);
-        width: 200px;
+        width: 250px;
         @include after-title;
       }
     }
